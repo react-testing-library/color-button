@@ -29,9 +29,9 @@ module.exports = {
     '^.+\\.(css|scss)$': 'identity-obj-proxy',
     // declaring alias for reducing the use of relative path
     '^@/jest(.*)$': '<rootDir>$1',
-    '^@/js(.*)$': `../${rootDirectory}/js/$1`,
-    '^@/scss(.*)$': `../${rootDirectory}/scss/$1`,
-    '^@/img(.*)$': `../${rootDirectory}/assets/images/$1`,
+    '^@/js(.*)$': '<rootDir>/../src/js/$1',
+    '^@/scss(.*)$': '<rootDir>/../src/scss/$1',
+    '^@/img(.*)$': '<rootDir>/../src/assets/images/$1',
   },
   // An array of file extensions your modules use
   moduleFileExtensions: ['js', 'ts', 'tsx', 'json', 'jsx', 'node'],
