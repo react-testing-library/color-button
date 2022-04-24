@@ -1,8 +1,6 @@
-import { cleanup, render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 //component
 import App from './App';
-
-afterEach(cleanup);
 
 describe('App Component', () => {
   beforeEach(() => {
