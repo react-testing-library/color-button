@@ -5,9 +5,12 @@ import App from './App';
 afterEach(cleanup);
 
 describe('App Component', () => {
-  test('renders webpack react boilerplate', () => {
+  beforeAll(() => {
     render(<App />);
-    const title = screen.getByRole('heading', { name: /webpack react boilerplate/i });
-    expect(title).toBeInTheDocument();
   });
+  test('button has correct initial color', () => {
+    const button = screen.getByRole('button', { name: 'Change to blue' });
+    expect(button).toHaveStyle({ backgroundColor: 'red' });
+  });
+  test('button turns blue when clicked', () => {});
 });
