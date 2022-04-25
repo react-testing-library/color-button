@@ -6,15 +6,15 @@ import { replaceCamelWithSpaces } from '@/js/constants/Helpers';
 
 describe('App Component', () => {
   describe('button color and functionality', () => {
+    let button;
     beforeEach(() => {
       render(<App />);
+      button = screen.getByRole('button', { name: 'Change to MidnightBlue' });
     });
     test('button has correct initial color', () => {
-      const button = screen.getByRole('button', { name: 'Change to MidnightBlue' });
       expect(button).toHaveStyle({ backgroundColor: 'MediumVioletRed' });
     });
     test('button turns blue when clicked', () => {
-      const button = screen.getByRole('button', { name: 'Change to MidnightBlue' });
       fireEvent.click(button);
       expect(button).toHaveStyle({ backgroundColor: 'MidnightBlue' });
       expect(button).toHaveTextContent('Change to MediumVioletRed');
