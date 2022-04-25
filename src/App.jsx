@@ -15,8 +15,10 @@ const App = () => {
         Change to {isRed ? 'blue' : 'red'}
       </button>
       <div>
+        <label htmlFor="enable-button-checkbox">Disable button</label>
         <input
           type="checkbox"
+          id="enable-button-checkbox"
           value={disabled}
           aria-checked={disabled}
           onChange={({ target: { checked } }) => {
