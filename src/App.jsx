@@ -1,5 +1,6 @@
 import { hot } from 'react-hot-loader/root';
 import { useState } from 'react';
+import { replaceCamelWithSpaces } from '@/js/constants/Helpers';
 
 const App = () => {
   const [isRed, setIsRed] = useState(true),
@@ -8,11 +9,13 @@ const App = () => {
   return (
     <div>
       <button
-        style={{ backgroundColor: disabled ? 'gray' : isRed ? 'red' : 'blue' }}
+        style={{
+          backgroundColor: disabled ? 'gray' : isRed ? 'MediumVioletRed' : 'MidnightBlue',
+        }}
         onClick={() => setIsRed((prev) => !prev)}
         disabled={disabled}
       >
-        Change to {isRed ? 'blue' : 'red'}
+        Change to {isRed ? 'MidnightBlue' : 'MediumVioletRed'}
       </button>
       <div>
         <label htmlFor="enable-button-checkbox">Disable button</label>
