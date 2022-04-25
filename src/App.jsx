@@ -18,6 +18,7 @@ const App = () => {
         <input
           type="checkbox"
           value={disabled}
+          aria-checked={disabled}
           onChange={({ target: { checked } }) => {
             setDisabled(checked);
           }}
