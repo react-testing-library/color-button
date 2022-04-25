@@ -1,6 +1,5 @@
 import { hot } from 'react-hot-loader/root';
 import { useState } from 'react';
-import { replaceCamelWithSpaces } from '@/js/constants/Helpers';
 
 const App = () => {
   const [isRed, setIsRed] = useState(true),

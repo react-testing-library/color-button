@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 //component
 import App from './App';
+//helpers
 import { replaceCamelWithSpaces } from '@/js/constants/Helpers';
 
 describe('App Component', () => {
