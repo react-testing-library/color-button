@@ -31,7 +31,7 @@ describe('App Component', () => {
       const checkbox = screen.getByRole('checkbox');
       expect(checkbox).not.toBeChecked();
     });
-    test('checkbox functionality', () => {
+    test('checkbox disables button on first click and enables on second click', () => {
       const checkBox = screen.getByRole('checkbox'),
         button = screen.getByRole('button', { name: 'Change to blue' });
 
