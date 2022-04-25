@@ -18,8 +18,8 @@ const App = () => {
         <input
           type="checkbox"
           value={disabled}
-          onChange={() => {
-            setDisabled((prev) => !prev);
+          onChange={({ target: { checked } }) => {
+            setDisabled(checked);
           }}
         />
       </div>
