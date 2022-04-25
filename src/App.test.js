@@ -43,5 +43,26 @@ describe('App Component', () => {
       expect(checkBox).not.toBeChecked();
       expect(button).toBeEnabled();
     });
+    test('Disabled button has gray background and reverts to red', () => {
+      const checkBox = screen.getByRole('checkbox', { name: 'Disable button' }),
+        button = screen.getByRole('button', { name: 'Change to blue' });
+
+      fireEvent.click(checkBox);
+      expect(button).toHaveStyle({ backgroundColor: 'gray' });
+
+      fireEvent.click(checkBox);
+      expect(button).toHaveStyle({ backgroundColor: 'red' });
+    });
+    test('Clicked disabled button has gray background and reverts to blue', () => {
+      const checkBox = screen.getByRole('checkbox', { name: 'Disable button' }),
+        button = screen.getByRole('button', { name: 'Change to blue' });
+
+      fireEvent.click(button);
+      fireEvent.click(checkBox);
+      expect(button).toHaveStyle({ backgroundColor: 'gray' });
+
+      fireEvent.click(checkBox);
+      expect(button).toHaveStyle({ backgroundColor: 'blue' });
+    });
   });
 });

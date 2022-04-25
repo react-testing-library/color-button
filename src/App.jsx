@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <button
-        style={{ backgroundColor: isRed ? 'red' : 'blue' }}
+        style={{ backgroundColor: disabled ? 'gray' : isRed ? 'red' : 'blue' }}
         onClick={() => setIsRed((prev) => !prev)}
         disabled={disabled}
       >
