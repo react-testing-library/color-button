@@ -31,13 +31,17 @@ describe('App Component', () => {
       const checkbox = screen.getByRole('checkbox');
       expect(checkbox).not.toBeChecked();
     });
-    /*test('button is disabled after checking the checkbox', () => {
+    test('checkbox functionality', () => {
       const checkBox = screen.getByRole('checkbox'),
         button = screen.getByRole('button', { name: 'Change to blue' });
 
-      fireEvent.change(checkBox);
+      fireEvent.click(checkBox);
       expect(checkBox).toBeChecked();
       expect(button).toBeDisabled();
-    });*/
+
+      fireEvent.click(checkBox);
+      expect(checkBox).not.toBeChecked();
+      expect(button).toBeEnabled();
+    });
   });
 });
